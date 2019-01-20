@@ -12,5 +12,5 @@ suite = unittest.TestSuite()
 suite.addTests(loader.loadTestsFromModule(FarmRiseTests))
 
 # initialize a runner, pass it your suite and run it
-runner = HtmlTestRunner.HTMLTestRunner(output='reports/test-reports', verbosity=2)
+runner = HtmlTestRunner.HTMLTestRunner(output='test-report', verbosity=2)
 runner.run(suite)
