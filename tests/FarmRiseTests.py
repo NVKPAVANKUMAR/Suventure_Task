@@ -10,9 +10,9 @@ from screens.More_Screen import MoreScreen
 from screens.WeatherForecast_Screen import WeatherForecastScreen
 
 
-def get_time():
-    nine_hours_from_now = datetime.now() + timedelta(hours=23)
-    return '{:%I %p}'.format(nine_hours_from_now)
+def get_custom_time():
+    twenty_three_hours_from_now = datetime.now() + timedelta(hours=23)
+    return '{:%I %p}'.format(twenty_three_hours_from_now)
 
 
 class FarmRiseAndroidTests(unittest.TestCase):
@@ -43,7 +43,7 @@ class FarmRiseAndroidTests(unittest.TestCase):
         weather_screen.click_weather_forecast_bar()
         weather_screen.scroll_to_lasttimeelement()
         time_value = weather_screen.get_time_text()
-        self.assertEqual(get_time(), time_value, "Assertion Failure")
+        self.assertEqual(get_custom_time(), time_value, "Assertion Failure")
 
     def test_government_schemes_screen(self):
         more_screen = MoreScreen(self.driver)
