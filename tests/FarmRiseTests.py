@@ -22,6 +22,7 @@ class FarmRiseAndroidTests(unittest.TestCase):
         desired_caps = {'platformName': 'Android',
                         'platformVersion': '8.0',
                         'deviceName': 'P8B4C18105007441',
+                        'noReset': 'true',
                         'appPackage': 'com.climate.farmrise',
                         'appActivity': 'com.climate.farmrise.base.FarmriseHomeActivity'}
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
