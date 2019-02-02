@@ -10,3 +10,6 @@ class HomeScreen:
 
     def click_access_weather_detail_option(self):
         self.driver.find_element_by_xpath(Locator.access_weather_detail_option).click()
+
+    def click_more_icon(self):
+        self.driver.find_element_by_xpath(Locator.more_icon).click()

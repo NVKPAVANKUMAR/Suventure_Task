@@ -6,7 +6,6 @@ from appium import webdriver
 
 from screens.Government_Schemes_Screen import GovernmentSchemesScreen
 from screens.Home_Screen import HomeScreen
-from screens.More_Screen import MoreScreen
 from screens.WeatherForecast_Screen import WeatherForecastScreen
 
 
@@ -47,8 +46,8 @@ class FarmRiseAndroidTests(unittest.TestCase):
         self.assertEqual(get_custom_time(), time_value, "Assertion Failure")
 
     def test_government_schemes_screen(self):
-        more_screen = MoreScreen(self.driver)
-        more_screen.click_more_icon()
+        home_screen = HomeScreen(self.driver)
+        home_screen.click_more_icon()
         government_schemes_screen = GovernmentSchemesScreen(self.driver)
         government_schemes_screen.click_governmentschemes_option()
         self.scrollToElement("LOAD MORE SCHEMES")
